@@ -45,7 +45,7 @@ class Host:
 
     def get_retention_time(self):
         """Return date of retention"""
-        return self.now - datetime.timedelta(days=int(RETENTION_DAYS))
+        return self.now - datetime.timedelta(days=int(RETENTION_DAYS)) + datetime.timedelta(seconds=int(10))
 
 
 class Snapshot:
